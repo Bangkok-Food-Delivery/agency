@@ -1,0 +1,431 @@
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #cs-navigation {
+    height: 5.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #cs-navigation:before,
+  #cs-navigation:after {
+    width: 67%;
+    opacity: 1;
+  }
+  #cs-navigation .cs-logo {
+    height: 3.75rem;
+  }
+  #cs-navigation .cs-li {
+    padding: 2rem 0;
+  }
+  #cs-navigation .cs-li-link:before {
+    background-color: #dfdfdf;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #services-17 {
+    /* Centers Button */
+    text-align: center;
+    padding: var(--sectionPadding);
+  }
+  #services-17 .cs-container {
+    width: 100%;
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6.3vw, 4rem);
+  }
+  #services-17 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #services-17 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 17ch;
+    margin: 0 auto 1rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #services-17 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    color: var(--bodyTextColor);
+  }
+  #services-17 .cs-card-group {
+    /* Card Group */
+    max-width: 20.3125rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #services-17 .cs-item {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #services-17 .cs-item:last-of-type {
+    margin: 0;
+  }
+  #services-17 .cs-picture {
+    margin-right: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* 60px - 68px */
+    width: clamp(3.75rem, 6vw, 4.25rem);
+    height: clamp(3.75rem, 6vw, 4.25rem);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #services-17 .cs-picture img {
+    width: 2.5rem;
+    height: auto;
+    display: block;
+  }
+  #services-17 .cs-heading3 {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--headerColor);
+  }
+  #services-17 .cs-item-text {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-17 .cs-button-solid {
+    width: auto;
+    max-width: 12.5rem;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5em) {
+  #services-17 .cs-card-group {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+  }
+  #services-17 .cs-item {
+    margin: 0;
+    width: 46.3%;
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75em) {
+  #services-17 .cs-card-group {
+    max-width: 80rem;
+  }
+  #services-17 .cs-item {
+    max-width: 23rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #services-17 .cs-title,
+  body.dark-mode #services-17 .cs-item-text,
+  body.dark-mode #services-17 .cs-text,
+  body.dark-mode #services-17 .cs-heading3 {
+    color: var(--bodyTextColorWhite);
+  }
+}
+
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+  #steps-584 {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    background-color: var(--secondary);
+  }
+  #steps-584 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #steps-584 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #steps-584 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--bodyTextColorWhite);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #steps-584 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 19 characters wide including spaces */
+    max-width: 19ch;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #steps-584 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #steps-584 .cs-item {
+    list-style: none;
+    min-height: 18.125rem;
+    /* 16px - 24px left & right */
+    padding: 1rem clamp(1rem, 1.8vw, 1.5rem);
+    border-bottom: 1px solid var(--bodyTextColorWhite);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #steps-584 .cs-item:last-of-type {
+    border: none;
+  }
+  #steps-584 .cs-h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0 0 0.75rem 0;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #steps-584 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #steps-584 .cs-number {
+    font-size: 3.8125rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    /* auto pushes against other elements in a flexbox, this one forces it to be at the bottom of the flexbox */
+    margin: auto 0 0 0;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-584 .cs-container {
+    max-width: 80rem;
+  }
+  #steps-584 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #steps-584 .cs-item {
+    width: 48%;
+  }
+  #steps-584 .cs-item:nth-of-type(3) {
+    border-bottom: none;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #steps-584 .cs-card-group {
+    flex-wrap: nowrap;
+  }
+  #steps-584 .cs-item {
+    border-bottom: none;
+    border-right: 1px solid var(--bodyTextColorWhite);
+  }
+}
+                                
+                                
+
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  
+  #cta-262 {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+  }
+  #cta-262 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    /* 32px - 88px top & bottom */
+    /* 24px - 88px left & right */
+    padding: clamp(2em, 6.3vw, 5.5em) clamp(1.5em, 5.7vw, 5.5em);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    /* clips the corners for the border radius to show */
+    overflow: hidden;
+    z-index: 1;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #cta-262 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+  }
+  #cta-262 .cs-background:before {
+    /* black overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-262 .cs-background:after {
+    /* brown overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primaryLight);
+    opacity: .2;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #cta-262 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #cta-262 .cs-left-section {
+    max-width: 27.125rem;
+  }
+  #cta-262 .cs-title {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 3.9vw, 3.0625rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: left;
+    max-width: 50rem;
+    /* 20px - 48px */
+    margin: 0 auto clamp(1.25rem, 4.7vw, 3rem);
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+ 
+  #cta-262 .cs-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* 12px - 20px */
+    gap: clamp(0.75rem, 1.6vw, 1.25rem);
+  }
+  #cta-262 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.4vw, 1.5625rem);
+    font-weight: bold;
+    color: var(--primaryLight);
+    display: block;
+  }
+  #cta-262 .cs-p {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cta-262 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #cta-262 .cs-content {
+    align-items: flex-end;
+    text-align: right;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #cta-262 .cs-background:before {
+    opacity: .9;
+  }
+  body.dark-mode #cta-262 .cs-background:after {
+    opacity: .1;
+  }
+}
+                                

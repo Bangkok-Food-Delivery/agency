@@ -1,0 +1,508 @@
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #cs-navigation {
+    height: 5.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #cs-navigation:before,
+  #cs-navigation:after {
+    width: 67%;
+    opacity: 1;
+  }
+  #cs-navigation .cs-logo {
+    height: 3.75rem;
+  }
+  #cs-navigation .cs-li {
+    padding: 2rem 0;
+  }
+  #cs-navigation .cs-li-link:before {
+    background-color: #dfdfdf;
+  }
+}
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  
+  #contact-323 {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #contact-323 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.25rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.25rem;
+  }
+  #contact-323 .cs-content {
+    text-align: left;
+  }
+  #contact-323 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primaryLight);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #contact-323 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #contact-323 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #contact-323 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    /* 24px - 32px */
+    margin-bottom: clamp(1.5rem, 5vw, 2rem);
+  }
+  #contact-323 .cs-form {
+    /* 20px - 48px top and bottom */
+    /* 20px - 32px left and right */
+    padding: clamp(1.25rem, 4.18vw, 3rem) clamp(1.25rem, 4.18vw, 2rem);
+    background-color: #F7F7F7;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #contact-323 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-323 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--headerColor);
+    background-color: #fff;
+    border: none;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #contact-323 .cs-input::placeholder {
+    color: #7D799C;
+    opacity: .6;
+  }
+  #contact-323 .cs-textarea {
+    min-height: 7.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+  }
+  #contact-323 .cs-map {
+    width: 100%;
+    max-width: 39.375rem;
+    /* 328px - 425px */
+    height: clamp(20.5rem, 63.4vw, 26.5625rem);
+    border-radius: 1.5rem;
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #contact-323 .cs-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-323 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.25rem;
+  }
+  #contact-323 .cs-content {
+    max-width: 35.4375rem;
+  }
+  #contact-323 .cs-title,
+  #contact-323 .cs-topper,
+  #contact-323 .cs-text {
+    text-align: left;
+    margin-left: 0;
+  }
+  #contact-323 .cs-title {
+    max-width: 32.625rem;
+  }
+  #contact-323 .cs-email,
+  #contact-323 .cs-phone {
+    width: 47%;
+  }
+  #contact-323 .cs-button-solid {
+    margin-left: 0;
+  }
+  #contact-323 .cs-map {
+    height: auto;
+    aspect-ratio: 0.89871612;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #contact-323 .cs-topper {
+    color: var(--secondaryLight);
+  }
+  body.dark-mode #contact-323 .cs-title,
+  body.dark-mode #contact-323 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #contact-323 .cs-form {
+    background-color: var(--medium);
+  }
+  body.dark-mode #contact-323 .cs-label {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #contact-323 .cs-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #contact-323 .cs-input::placeholder {
+    color: #fff;
+    opacity: .5;
+  }
+}
+                                
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats {
+    padding: var(--sectionPadding);
+    background-color: #000;
+    /* clips the glowing orbs from causing overflow issues when they overflow the container */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #stats:before,
+  #stats:after {
+    /* glowing orbs */
+    content: '';
+    width: 28.3125rem;
+    height: 20.8125rem;
+    background: #F1F1F4;
+    opacity: 0.16;
+    -webkit-filter: blur(182px);
+    filter: blur(182px);
+    position: absolute;
+    display: block;
+    top: -4.125rem;
+    left: -14.1875rem;
+    z-index: -1;
+  }
+  #stats:after {
+    display: none;
+  }
+  #stats .cs-container {
+    width: 100%;
+    max-width: 80em;
+    margin: auto;
+  }
+  #stats .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3.75rem;
+  }
+  #stats .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 21.875rem;
+    margin: 0;
+    padding: 0 0.75rem;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #stats .cs-icon {
+    /* 50px - 76px */
+    width: clamp(3.125rem, 6vw, 4.75rem);
+    height: auto;
+    margin: 0 0 1.25rem;
+    display: block;
+  }
+  #stats .cs-number {
+    /* 31px - 61px */
+    font-size: clamp(1.9375rem, 4.3vw, 3.8125rem);
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 0.25rem 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #stats .cs-desc {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats:after {
+    display: block;
+    left: auto;
+    top: 3.5625rem;
+    right: -17.5625rem;
+  }
+  #stats .cs-card-group {
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-707 {
+    padding: var(--sectionPadding);
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f7f7;
+  }
+  #reviews-707 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-707 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-707 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #reviews-707 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #reviews-707 .cs-title {
+    /* cs-title override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This second cs-title is a section specific override that stays inside this stitch */
+    max-width: 20ch;
+    margin: 0;
+  }
+  #reviews-707 .cs-color {
+    color: var(--primary);
+  }
+  #reviews-707 .cs-flex-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    column-gap: 1.25rem;
+    row-gap: 2.5rem;
+  }
+  #reviews-707 .cs-review-group {
+    text-align: left;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    row-gap: 2.5rem;
+  }
+  #reviews-707 .cs-picture-group {
+    width: 100%;
+    /* changes to 240px at tablet */
+    max-width: 21.875rem;
+    position: relative;
+  }
+  #reviews-707 .cs-picture {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 0.83916084;
+    border-radius: 17.8125em;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border: clamp(6px, 2vw, 12px) solid #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #reviews-707 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-707 .cs-wrapper {
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border: 1px solid #f7f7f7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #reviews-707 .cs-icon {
+    width: 2.375rem;
+    height: auto;
+    margin: 0;
+    display: inline-block;
+  }
+  #reviews-707 .cs-review {
+    max-width: 33.8125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+  #reviews-707 .cs-review-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 1.5rem 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-707 .cs-name {
+    /* 20px - 23px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: auto 0 0.5rem 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-707 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #reviews-707 .cs-stars {
+    width: 6.25rem;
+    height: auto;
+    margin-top: 0.5rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-707 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-707 .cs-flex-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 4rem;
+  }
+  #reviews-707 .cs-review-group {
+    text-align: left;
+    width: 30vw;
+    max-width: 25.8125rem;
+    align-items: flex-start;
+  }
+  #reviews-707 .cs-picture-group {
+    max-width: 15rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-707 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #reviews-707 .cs-title,
+  body.dark-mode #reviews-707 .cs-text,
+  body.dark-mode #reviews-707 .cs-review-text,
+  body.dark-mode #reviews-707 .cs-name,
+  body.dark-mode #reviews-707 .cs-job {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews-707 .cs-wrapper {
+    background-color: var(--medium);
+  }
+  body.dark-mode #reviews-707 .cs-text,
+  body.dark-mode #reviews-707 .cs-review-text {
+    opacity: .8;
+  }
+}

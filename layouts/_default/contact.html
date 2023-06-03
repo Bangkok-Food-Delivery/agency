@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swap our for actual link-->
+    <link rel="canonical" href="">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="/assets/images/hero.png"/>
+    <meta property="og:image:secure_url" content="/assets/images/hero.png"/>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    
+    <link rel="preload" as="image" href="/assets/images/herocare.svg">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/dark.css">
+
+    <!-- Loading in page specific CSS sheets from css block -->
+    
+
+    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
+
+    <title>Insert Page Title Here</title>
+</head>
+<body>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+    <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="back to home">
+            <img src="/image/icon/logo.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+       <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded-758" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about" class="cs-li-link  ">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link ">
+                            Services
+                            <img class="cs-drop-icon" src="/image/icon/Icons_down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/workers" class="cs-li-link cs-drop-link">Website Build</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/workers" class="cs-li-link cs-drop-link">Website Maintenance </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/workers" class="cs-li-link cs-drop-link">Local SEO</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/workers" class="cs-li-link cs-drop-link">PPC Ad Management</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/blog" class="cs-li-link ">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="cs-li cs-nav-button cs-active ">
+                        <a href="/contact" class="cs-button-solid">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="/contact" class="cs-button-solid cs-cta-button">Contact Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="/image/icon/sun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button>
+    </div>
+</header>
+                                
+    <main id="main">
+
+<link rel="preload" as="image" href="/assets/images/int-m.webp">
+
+
+
+<link rel="stylesheet" href="/css/contact.css">
+
+
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://d33wubrfki0l68.cloudfront.net/f57696cbdae8ab597f3cb54bc378e0804a8446d5/1d97c/assets/images/int-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://d33wubrfki0l68.cloudfront.net/ecd181c6b9426ef8698ac3f835993a8725be72a2/011d2/assets/images/int.jpg">
+        <img aria-hidden="true" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/ecd181c6b9426ef8698ac3f835993a8725be72a2/011d2/assets/images/int.jpg" alt="comic background" width="1280" height="568">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-323">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get in Touch</h2>
+            <p class="cs-text">
+                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis.
+            </p>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-323" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-323" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="text" id="email-323" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="text" id="phone-323" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-323" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
+            </form>
+        </div>
+        <!--Map Image, pin is made in the Figma then export as one image-->
+        <picture class="cs-map">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png">
+            <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png" alt="map" width="610" height="425" aria-hidden="true">
+        </picture>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="stats">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/a52472514fb7d33241f63ca0128ee4504422a55e/a5d22/assets/images/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
+                <span class="cs-number">500K</span>
+                <span class="cs-desc">Hours Provided</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/a52472514fb7d33241f63ca0128ee4504422a55e/a5d22/assets/images/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
+                <span class="cs-number">99%</span>
+                <span class="cs-desc">Fill Rate</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/a52472514fb7d33241f63ca0128ee4504422a55e/a5d22/assets/images/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
+                <span class="cs-number">10K</span>
+                <span class="cs-desc">Pros On our Roster</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-707">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">What They’re Saying About Us</h2>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-review-group">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://d33wubrfki0l68.cloudfront.net/bdbc75c324bce5e59917d64ebfa9bfa72e0aaeba/5b52f/assets/images/review1.webp">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://d33wubrfki0l68.cloudfront.net/1c4bf269ab544e254e38ef7a370633ebab9dfdd3/1d593/assets/images/review1.png">
+                        <img loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/1c4bf269ab544e254e38ef7a370633ebab9dfdd3/1d593/assets/images/review1.png" alt="person" width="240" height="286">
+                    </picture>
+                    <!--Quote Block-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/f859bcf51188eb67bfff749a196a8fda1d2aa698/c434d/assets/images/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
+                    </picture>
+                </div>
+                <div class="cs-review">
+                    <p class="cs-review-text">
+                        The quality of staff provided by Hero Care has been consistently impressive. Their nurses are experienced, well-trained, and skilled in delivering high-quality care to our patients. They are professional, compassionate, and work seamlessly with our existing hospital staff, ensuring smooth collaboration and continuity of care.
+                    </p>
+                    <span class="cs-name">Client</span>
+                    <span class="cs-job">Nursing Supervisor/Educator, Winnipeg</span>
+                    <img class="cs-stars" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/9e23790c56601a7e43f76007242770628b9aee99/a36ac/assets/images/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
+                </div>
+            </div>
+            <div class="cs-review-group">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture cs-picture-bg">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://d33wubrfki0l68.cloudfront.net/33ddb05fe02c6966ff5dd85f53b591beb546778a/b5c8e/assets/images/review2.webp">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://d33wubrfki0l68.cloudfront.net/c9f519030fea3c9f22f788f5cd235d9f852cab81/fcf76/assets/images/review2.png">
+                        <img loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/c9f519030fea3c9f22f788f5cd235d9f852cab81/fcf76/assets/images/review2.png" alt="person" width="240" height="286">
+                    </picture>
+                    <!--Quote Block-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/f859bcf51188eb67bfff749a196a8fda1d2aa698/c434d/assets/images/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
+                    </picture>
+                </div>
+                <div class="cs-review">
+                    <p class="cs-review-text">
+                        Hero Care has consistently demonstrated exceptional performance in several key areas, like communication, technology, and the quality of their professionals,  making them a reliable and valuable partner in our patient care efforts.
+                    </p>
+                    <span class="cs-name">Client</span>
+                    <span class="cs-job">Hospital administrator, Kenora BC</span>
+                    <img class="cs-stars" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/9e23790c56601a7e43f76007242770628b9aee99/a36ac/assets/images/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
+                </div>
+            </div>
+            <div class="cs-review-group">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture cs-picture-bg2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://d33wubrfki0l68.cloudfront.net/1379f230adfb052e3e1a1d8a9600e7856ba89ff0/5ded5/assets/images/review3.webp">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://d33wubrfki0l68.cloudfront.net/87c9613d73bb48afaf16d1442791e8e12bc82473/2ca8f/assets/images/review3.png">
+                        <img loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/87c9613d73bb48afaf16d1442791e8e12bc82473/2ca8f/assets/images/review3.png" alt="person" width="240" height="286">
+                    </picture>
+                    <!--Quote Block-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/f859bcf51188eb67bfff749a196a8fda1d2aa698/c434d/assets/images/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
+                    </picture>
+                </div>
+                <div class="cs-review">
+                    <p class="cs-review-text">
+                        As someone who is new to agency nursing, I can say that the Hero Care team helped to guide me and reduce any anxieties I had. I was contacted quickly, walked through all the steps I was required to take, and updated frequently. I am comfortable reaching out for feedback and guidance. I feel very supported.
+                    </p>
+                    <span class="cs-name">Nurse</span>
+                    <span class="cs-job">Registered Nurse</span>
+                    <img class="cs-stars" loading="lazy" decoding="async" src="https://d33wubrfki0l68.cloudfront.net/9e23790c56601a7e43f76007242770628b9aee99/a36ac/assets/images/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                                   </main>
+   <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <section id="cs-footer">
+        <div class="cs-container">
+            <div class="cs-top">
+                <!-- Logo Group -->
+                <div class="cs-logo-group">
+                    <a aria-label="go back to home" class="cs-logo" href="/">
+                        <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/logo.svg" alt="logo" width="158" height="37">
+                    </a>
+                </div>
+                <!-- Contact Info -->
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <span class="cs-header">Contact</span>
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/mail-teal.svg" alt="phone" width="24" height="24">
+                        <a class="cs-link cs-phone" href="#">hello@yourbrand.com</a>
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/pin-teal.svg" alt="pin" width="24" height="24">
+                        <span class="cs-link cs-address">
+                            Toronto, ON
+                        </span>
+                    </li>
+                </ul>
+                <!--Sitemap-->
+                <ul class="cs-ul cs-sitemap">
+                    <li class="cs-li">
+                        <span class="cs-header">Sitemap</span>
+                    </li>
+                    <li class="cs-li">
+                        <a class="cs-link" href="/about">
+                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a class="cs-link" href="/organizations">
+                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
+                            Organizations
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a class="cs-link" href="/workers">
+                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
+                            Health Care Pros.
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a class="cs-link" href="/contact">
+                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-subscribe-group">
+                    <a class="cs-seal" href=""><img loading="lazy" decoding="async" src="/image/icon/badge.png" width="300px" height="300px" alt="TOP HEALTHCARE STAFFING" /></a>
+                    <span class="cs-header">Subscribe to our news</span>
+                    <form class="cs-form" name="Footer Subscribe" method="post">
+                        <input id="email" aria-label="email" class="cs-input" name="email" type="email" placeholder="Email" required>
+                        <button name="submit" type="submit" id="cs-submit" class="button-transparent" data-submit="...Sending">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <!--Bottom Copyright And Social-->
+            <div class="cs-bottom">
+                <div class="cs-copyright">
+                    <span>Copyright 2023</span>
+                    <div class="cs-flex">
+                        <a class="cs-copyright-link" href="" target="_blank">Built By Eworks</a>
+                        <a href="/privacy-policy" class="cs-copyright-link cs-terms">Privacy Policy</a>
+                        <a href="/terms-and-conditions" class="cs-copyright-link cs-terms">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                <div class="cs-social">
+                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/facebook.svg" alt="facebook" width="11" height="11">
+                    </a>
+                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/linkedin.svg" alt="linkedin" width="11" height="11">
+                    </a>
+                    <a class="cs-social-link" aria-label="visit instagram profile" href="" target="_blank" rel="noopener">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/instagram-teal.svg" alt="instagram" width="6" height="11">
+                    </a>
+                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/indeed.svg" alt="indeed" width="11" height="11">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                
+
+    <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/3e81bebd00b8a71cfd96f3655691f4ceaecc24f6.js'></script>
+
+    <!--
+        This script adds a class to the body after scrolling 100px
+        and we used these body.scroll styles to create some on scroll 
+        animations with the navbar
+    -->
+    <script>
+        document.addEventListener('scroll', (e) => { 
+            const scroll = document.documentElement.scrollTop;
+            if(scroll >= 100){
+        document.querySelector('body').classList.add('scroll')
+            } else {
+            document.querySelector('body').classList.remove('scroll')
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
