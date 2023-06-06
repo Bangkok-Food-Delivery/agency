@@ -1,137 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Swap our for actual link-->
-    <link rel="canonical" href="#">
+{{ define "main" }}
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 
-    <!--Social Media Display-->
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content="/assets/images/hero.png"/>
-    <meta property="og:image:secure_url" content="/assets/images/hero.png"/>
-
-    <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicons/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Preload -->
-    
-    <link rel="preload" as="image" href="/assets/images/herocare.svg">
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
-
-    <link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/dark.css">
-
-    <!-- Loading in page specific CSS sheets from css block -->
-    
-
-    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
-
-    <title>Insert Page Title Here</title>
-</head>
-<body>
-    <!--Screen reader skip main nav-->
-    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
-
-    <!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
-<header id="cs-navigation">
-    <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/image/icon/logo.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </div>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded-758" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="/" class="cs-li-link cs-active">
-                            Home
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/about" class="cs-li-link ">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link ">
-                            Services
-                            <img class="cs-drop-icon" src="/image/icon/Icons_down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
-                        <ul class="cs-drop-ul">
-                            <li class="cs-drop-li">
-                                <a href="/workers" class="cs-li-link cs-drop-link">Website Build</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/workers" class="cs-li-link cs-drop-link">Website Maintenance </a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/workers" class="cs-li-link cs-drop-link">Local SEO</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/workers" class="cs-li-link cs-drop-link">PPC Ad Management</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/blog" class="cs-li-link ">
-                            Blog
-                        </a>
-                    </li>
-                    <li class="cs-li cs-nav-button">
-                        <a href="/contact" class="cs-button-solid">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <a href="/contact" class="cs-button-solid cs-cta-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <button id="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-            <img class="cs-sun" aria-hidden="true" src="/image/icon/sun.svg" decoding="async" alt="moon" width="15" height="15">
-        </button>
-    </div>
-</header>
-                                
-    <main id="main">
 <!-- 
 This is to pre load any image above the fold, like hero section backgrounds.
 If you do not have any images in your hero section that you need to preload, remove this 
-block
+block 
 -->
 
 
-<link rel="preload" as="image" href="/assets/images/powered-m.webp">
-<link rel="preload" as="image" href="/assets/images/hero-m.webp">
+<link rel="preload" as="image" href="/assets/images/landing-m2.webp">
 
 
 
@@ -142,390 +20,255 @@ block
 <link rel="stylesheet" href="/css/local.css" media="print" onload="this.media='all'; this.onload=null;">
 
 
-<!-- Enter html code below -->
-
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-330">
+<section id="hero-856">
     <div class="cs-container">
-        <div class="cs-flex-group">
-            <h1 class="cs-title">Small Business Web Design & Development</h1>
+        <div class="cs-content">
+            <span class="cs-topper">Modern and Professional</span>
+            <h1 class="cs-title">Traditional Thai Massage & Spa In Girona</h1>
             <p class="cs-text">
-                No page builders or WordPress - We offer 100% hand-coded websites with superior results starting at ฿5000/mo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, provident? Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
-            <div class="cs-button-group">
-                <a href="/contact" class="cs-button-solid">Get Started</a>
-                <a href="/#pricing-357" class="cs-button-transparent">
-                    <picture class="cs-picture">
-                        <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/chevron-right.svg" alt="icon" width="12" height="12" aria-hidden="true">
+            <a href="" class="cs-button-solid">Schedule An Appointment</a>
+        </div>
+        <!--Hero Image-->
+        <picture class="cs-picture">
+            <!--Mobile-->
+            <source media="(max-width: 600px)" srcset="/images/hot-stone.jpg">
+            <!--Tablet-->
+            <source media="(min-width: 601px)" srcset="/images/hot-stone.jpg">
+            <!--Desktop-->
+            <source media="(min-width: 1024px)" srcset="/images/hot-stone.jpg">
+            <img aria-hidden="true" decoding="async" src="/images/hot-stone.jpg" alt="therapy" width="570" height="701">
+            </picture>
+    </div>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="#fff"/>
+    </svg>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-877">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Massage</span>
+            <h2 class="cs-title">Our Most Popular Massages</h2>
+            <p class="cs-text">
+                Whether you're seeking relaxation, stress relief, pain management, or overall well-being, our therapists are skilled in a wide range of techniques to address your needs. From traditional Thai massage to aromatherapy, deep tissue massage to hot stone therapy, we have a variety of options to choose from.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/thai-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/thai-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/thai-massage.jpg" alt="therapy" width="305" height="200">
                     </picture>
-                    See Prices
+                    <h3 class="cs-h3">AUTHENTIC THAI MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        Our authentic Thai massage will make you feel both relaxed and energised through its unique combination of pressure point and ancient stretching techniques. It releases tension, increases vitality and flexibility, and creates wholeness of the mind, body and spirit.
+                    </p>
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Background Image -->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/dna-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/dna.jpg">
-        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/dna.jpg" alt="" width="2250" height="1500" aria-hidden="true">
-    </picture>
-</section>
-
-
-            
-
-<!-- ============================================ -->
-<!--                Services                      -->
-<!-- ============================================ -->
-{{with .Params.services }}
-{{if.enable}}
-<section id="services-448">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">{{ .subtitle }}</span>
-            <h2 class="cs-title">{{ .heading }}</h2>
-            <p class="cs-text">
-                {{ .text }}
-            </p>
-        </div>
-        <ul class="cs-card-group">
-            {{range .service_items}}
+            </li>
             <li class="cs-item">
-                <div class="cs-flex">
-                    <picture class="cs-wrapper">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/image/home/option1.png" alt="icon" width="70" height="70">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/aromatherapy-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/aromatherapy-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/aromatherapy-massage.jpg" alt="therapy" width="305" height="200">
                     </picture>
-                    <h2 class="cs-h3">{{ .heading }}</h2>
-                    <p class="cs-item-text">{{ .text }}</p>
-                    <div class="cs-button-group">
-                        <a href="{{ .button_link}}" class="cs-button-solid">{{ .button }}</a>
-                    </div>
-                </div>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
-</section> 
-{{ end }}
-{{ end }}
-
-
-
-<!-- ============================================ -->
-<!--            Side By Side                      -->
-<!-- ============================================ -->
-
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
-
-<section id="sbsr-333">
-    <div class="cs-container">
-        <!-- Left Image Section -->
-        <div class="cs-image-group">
-            <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg" alt="cleaner" width="630" height="630" aria-hidden="true">
-            </picture>
-            <div class="cs-box">
-                <span class="cs-number">12</span>
-                <span class="cs-desc">Years<br> Experience</span>
-            </div>
-        </div>
-        <!-- Right Content Section-->
-        <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Preserving A Good Relation Is the Key of Success</h2>
-            <p class="cs-text">
-                Decision Are A Professional Attorney & Lawyers Services Provider Institutions. Suitable For Law Firm, Injury Law, Traffic Ticket Attorney, Legacy And More. Lorem Ipsum is simply dummy text of the printing and typesetting industry simply.
-            </p>
-            <ul class="cs-ul">
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-            </ul>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!--                   Stats                      -->
-<!-- ============================================ -->
-
-<section id="stats">
-    <div class="cs-container">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <img class="cs-icon" aria-hidden="true" src="/image/home/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
-                <span class="cs-number">100%</span>
-                <span class="cs-desc">Hero Care respondents would engage in additional contracts</span>
+                    <h3 class="cs-h3">AROMATHERAPY MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        This massage is performed with essential oils blended from flower and fruit extracts to stimulate the muscles by hand. It focuses on gentle and soft massage to reduce muscle tension. The oil massage has a relaxing aroma that activates the nervous system, reduces tension and relieves fatigue. This oil massage will make your skin smooth and rejuvenated whilst leaving a relaxing effect that will enable you to sleep well.
+                    </p>
+                </a>
             </li>
             <li class="cs-item">
-                <img class="cs-icon" aria-hidden="true" src="/image/home/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
-                <span class="cs-number">100%</span>
-                <span class="cs-desc">Hero Care respondents would recommend Hero Care to a colleague</span>
-            </li>
-            <li class="cs-item">
-                <img class="cs-icon" aria-hidden="true" src="/image/home/stats-bolt.png" loading="lazy" decoding="async" alt="icon" width="76" height="76">
-                <span class="cs-number">10K</span>
-                <span class="cs-desc">Healthcare professionals across the country</span>
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <img loading="lazy" decoding="async" src="/images/massage-lomi-lomi.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">MASAJE LOMI LOMI (HAWAIANO)</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        ‘Lomi lomi’ translates to ‘rub rub’ in Hawaiian and reflects the broad, flowing strokes made with the therapist’s fingers, palms, arms and elbows. Coconut oil is used to enable the strokes to be smooth whilst moisturising and nourishing the skin. The massage works gently yet deeply into the muscles with continuous, flowing strokes, allowing the recipient to relax and give in to the nurturing touch. At the end of the session, enjoy a refreshing shower in our facilities.
+                    </p>
+                </a>
             </li>
         </ul>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
-
-<section id="RTsbs-335">
-    <div class="cs-container">
-        <!-- Left Image Section -->
-        <div class="cs-image-group">
-            <picture class="cs-picture" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2-m.jpg">
-                <source media="(min-width: 601px)" srcset="/image/home/website-design.webp">
-                <img loading="lazy" decoding="async" src="/image/home/website-design.webp" alt="cleaner" width="630" height="630">
-            </picture>
-            <div class="cs-box">
-                <span class="cs-number">12</span>
-                <span class="cs-desc">Years<br> Experience</span>
-            </div>
-        </div>
-        <!-- Right Content Section-->
-        <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Preserving A Good Relation Is the Key of Success</h2>
-            <p class="cs-text">
-                Decision Are A Professional Attorney & Lawyers Services Provider Institutions. Suitable For Law Firm, Injury Law, Traffic Ticket Attorney, Legacy And More. Lorem Ipsum is simply dummy text of the printing and typesetting industry simply.
-            </p>
-            <ul class="cs-ul">
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-            </ul>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-        </div>
+        <a href="" class="cs-button-solid">View All Massage</a>
     </div>
 </section>
                                 
+                                                  
+
 <!-- ============================================ -->
 <!--             Side By Side Reverse             -->
 <!-- ============================================ -->
 
-<section id="RTsbsr-335">
+<section id="sbs-r-868">
     <div class="cs-container">
-        <!-- Left Image Section -->
         <div class="cs-image-group">
-            <picture class="cs-picture" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg" alt="cleaner" width="630" height="630">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/images/facial.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/images/facial.jpg">
+                <img loading="lazy" decoding="async" src="/images/facial.jpg" alt="therapy" width="1280" height="568">
             </picture>
             <div class="cs-box">
-                <span class="cs-number">12</span>
-                <span class="cs-desc">Years<br> Experience</span>
+                <span class="cs-number">2500+</span>
+                <span class="cs-desc">
+                    Patients served successfully
+                </span>
             </div>
         </div>
-        <!-- Right Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Preserving A Good Relation Is the Key of Success</h2>
+            <span class="cs-topper">Small Group Training</span>
+            <h2 class="cs-title">Specializing In Patient’s  Complex Rehabilitation</h2>
             <p class="cs-text">
-                Decision Are A Professional Attorney & Lawyers Services Provider Institutions. Suitable For Law Firm, Injury Law, Traffic Ticket Attorney, Legacy And More. Lorem Ipsum is simply dummy text of the printing and typesetting industry simply.
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
             </p>
-            <ul class="cs-ul">
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-            </ul>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptas quisquam! Facilis, distinctio. Molestiae ipsam dolorum repudiandae sint veritatis? Sapiente consectetur eaque vitae obcaecati voluptates impedit quae tempore commodi? Eos, quia! Atque optio quos voluptates earum impedit rem, necessitatibus omnis.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
         </div>
     </div>
 </section>
 
+
 <!-- ============================================ -->
-<!--             Side By Side Triplet             -->
+<!--                 Why Choose                   -->
 <!-- ============================================ -->
 
-<section id="RTsbst-335">
+<section id="why-choose-890">
     <div class="cs-container">
-        <!-- Left Image Section -->
-        <div class="cs-image-group">
-            <picture class="cs-picture" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner2.jpg" alt="cleaner" width="630" height="630">
-            </picture>
-            <div class="cs-box">
-                <span class="cs-number">12</span>
-                <span class="cs-desc">Years<br> Experience</span>
-            </div>
-        </div>
-        <!-- Right Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Preserving A Good Relation Is the Key of Success</h2>
+            <span class="cs-topper">Specialties</span>
+            <h2 class="cs-title">Why Choose Us</h2>
             <p class="cs-text">
-                Decision Are A Professional Attorney & Lawyers Services Provider Institutions. Suitable For Law Firm, Injury Law, Traffic Ticket Attorney, Legacy And More. Lorem Ipsum is simply dummy text of the printing and typesetting industry simply.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia incidunt quia enim mollitia delectus? Perferendis sapiente quaerat quos. Odit quasi similique nobis earum laudantium ad doloribus quos eos quod. Delectus?
             </p>
-            <ul class="cs-ul">
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-                <li class="cs-li">Praesent feugiat sem mattis.</li>
-            </ul>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
         </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs1.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Highly Experienced Therapists</h3>
+                    <p class="cs-item-text">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, quam?
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs1.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">No one does outpatient like us</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, quam?
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs1.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Perfectly Structured Sessions</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, quam?
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs1.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Unique and adaptive equipment</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, quam?
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">Contact Us</a>   
     </div>
 </section>
                                 
 
+
+
+
 <!-- ============================================ -->
-<!--                  Pricing                     -->
+<!--                Side By Side                  -->
 <!-- ============================================ -->
 
-<section id="pricing-357">
+<section id="sbs-865">
     <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Pricing</span>
-            <h2 class="cs-title">It’s Easy to Get Started</h2>
-            <p class="cs-text">
-                At Stitch Cleaning Service, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
-            </p>
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/images/facial.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/images/facial.jpg">
+                <img loading="lazy" decoding="async" src="/images/facial.jpg" alt="therapy" width="1280" height="568">
+            </picture>
+            <div class="cs-box">
+                <span class="cs-number">2500+</span>
+                <span class="cs-desc">
+                    Patients served successfully
+                </span>
+            </div>
         </div>
-        <ul class="cs-card-group">
-            <!-- Option 1 -->
-            <li class="cs-item">
-                <h3 class="cs-h3">Starter</h3>
-                <p class="cs-item-text">
-                    Perfect to get started.
-                </p>
-                <div class="cs-option-group">
-                    <span class="cs-price">$39<span class="cs-small">/month</span></span>
-                </div>
-                <span class="cs-included">Package Includes</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        All available starter feature
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Home service 24/7
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Customer agent service
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Professional cleaner
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed room cleaning
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed, living room cleaning
-                    </li>
-                </ul>
-                <a href="/basic.html" class="cs-button-solid">Get Started</a>
-            </li>
-            <!-- Option 2 -->
-            <li class="cs-item cs-popular">
-                <h3 class="cs-h3">Starter</h3>
-                <p class="cs-item-text">
-                    Perfect to get started.
-                </p>
-                <div class="cs-option-group">
-                    <span class="cs-price">$69<span class="cs-small">/month</span></span>
-                </div>
-                <span class="cs-included">Package Includes</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        All available starter feature
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Home service 24/7
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Customer agent service
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Professional cleaner
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed room cleaning
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed, living room cleaning
-                    </li>
-                </ul>
-                <a href="/basic.html" class="cs-button-solid">Get Started</a>
-            </li>
-            <!-- Option 3 -->
-            <li class="cs-item">
-                <h3 class="cs-h3">Starter</h3>
-                <p class="cs-item-text">
-                    Perfect to get started.
-                </p>
-                <div class="cs-option-group">
-                    <span class="cs-price">$99<span class="cs-small">/month</span></span>
-                </div>
-                <span class="cs-included">Package Includes</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        All available starter feature
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Home service 24/7
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Customer agent service
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        Professional cleaner
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed room cleaning
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
-                        2 bed, living room cleaning
-                    </li>
-                </ul>
-                <a href="/basic.html" class="cs-button-solid">Get Started</a>
-            </li>
-        </ul>
+        <div class="cs-content">
+            <span class="cs-topper">Small Group Training</span>
+            <h2 class="cs-title">Specializing In Patient’s  Complex Rehabilitation</h2>
+            <p class="cs-text">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptas quisquam! Facilis, distinctio. Molestiae ipsam dolorum repudiandae sint veritatis? Sapiente consectetur eaque vitae obcaecati voluptates impedit quae tempore commodi? Eos, quia! Atque optio quos voluptates earum impedit rem, necessitatibus omnis.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
     </div>
 </section>
+                                                      
+
 
 <!-- ============================================ -->
-<!--                  Faq's                       -->
+<!--                     FAQ                      -->
 <!-- ============================================ -->
-
 
 <section id="faq-351">
     <div class="cs-container">
@@ -535,64 +278,54 @@ block
         </div>
         <ul class="cs-faq-group">
             <!-- Active class added as default -->
-            <li class="cs-faq-item">
+            <li class="cs-faq-item active">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        What is Hero Care?
+                        How much are house cleaning services?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Your tech-powered medical staffing solution designed to unite the Canadian healthcare workforce.  Healthcare alliance, assemble!
+                    Some 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        Who is Hero Care for?
+                        What is your plan cancellation policy?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    All healthcare workers and any organization looking for easy access to healthcare workers (Hospitals, Long Term Care Homes, retirement, agency, corporate, events, entertainment, industrial, travel and more).
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        How do I start as a hcw?
+                        How long should a house cleaning take?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Download the app or contact us to get started.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        How do I start as an organization?
+                        How much are house cleaning services?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Contact us to get you set up! - <a href="mailto:">hello@site.com</a>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        Do you accept new grads?
+                        Can cleanings be scheduled?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Yes! We love a new grad, and are happy to connect you with opportunities to start off your career with our like minded clients
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <button class="cs-button">
-                    <span class="cs-button-text">
-                        I can’t access the app - can I still use Hero Care?
-                    </span>
-                </button>
-                <p class="cs-item-p">
-                    While the app is designed to conveniently and seamlessly connect Healthcare workers with organizations looking for their unique skills, we are happy to accommodate those unable to access the app.  Contact us to find out more. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
         </ul>
@@ -601,53 +334,51 @@ block
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        Are you looking for only nurses?
+                        How much are house cleaning services?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    We are looking for all types of healthcare professionals. Nurse Practitioners, Registered Nurses, Licensed/Registered Practical Nurses, Personal Support Workers, Companions, Health Care Aids. Growing our roster with other allied healthcare professionals is always the goal, so stay tuned! 
-                    <br><br>
-                    Currently staffing Dental Assistants and Physicians off the app. 
-                </p>
-            </li>
-            <li class="cs-faq-item active">
-                <button class="cs-button">
-                    <span class="cs-button-text">
-                        How much does it cost?
-                    </span>
-                </button>
-                <p class="cs-item-p">
-                    FREE!
+                    Some cleaning plans require a minimum commitment term. Cancelling your plan before the minimum term is complete will result in a $99 fee. If you want to learn more information about how to cancel, please inbox us.
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        Where are you located?
+                        What is your plan cancellation policy?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Canada wide.  US expansion coming soon!
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        What phones does it work on?
+                        How long should a house cleaning take?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Download the app for iPhone and Android
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
             <li class="cs-faq-item">
                 <button class="cs-button">
                     <span class="cs-button-text">
-                        I can't login
+                        How much are house cleaning services?
                     </span>
                 </button>
                 <p class="cs-item-p">
-                    Please contact our account management team
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        Can cleanings be scheduled?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
                 </p>
             </li>
         </ul>
@@ -655,289 +386,73 @@ block
 </section>
 
 <!-- ============================================ -->
-<!--                  Reviews                     -->
+<!--                   Reviews                    -->
 <!-- ============================================ -->
 
-<section id="reviews-707">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Testimonials</span>
-            <h2 class="cs-title">What They’re Saying About Us</h2>
-        </div>
-        <div class="cs-flex-group">
-            <div class="cs-review-group">
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/image/home/review1.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/image/home/review1.png">
-                        <img loading="lazy" decoding="async" src="/image/home/review1.png" alt="person" width="240" height="286">
-                    </picture>
-                    <!--Quote Block-->
-                    <picture class="cs-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="/image/home/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
-                    </picture>
-                </div>
-                <div class="cs-review">
-                    <p class="cs-review-text">
-                        I was very skeptical about doing travel nursing at first, based on what other individuals have informed me. But trusting Hero Care as my first agency, was the right thing to do. The management and team here is superb, and they honestly care about your well-being. I will definitely sign another contract with you guys.
-                    </p>
-                    <span class="cs-name">Hero Care Pro</span>
-                    <span class="cs-job">Registered Nurse</span>
-                    <img class="cs-stars" loading="lazy" decoding="async" src="/image/home/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
-                </div>
-            </div>
-            <div class="cs-review-group">
-                <div class="cs-picture-group">
-                    <picture class="cs-picture cs-picture-bg">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/image/home/review2.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/image/home/review2.png">
-                        <img loading="lazy" decoding="async" src="/image/home/review2.png" alt="person" width="240" height="286">
-                    </picture>
-                    <!--Quote Block-->
-                    <picture class="cs-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="/image/home/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
-                    </picture>
-                </div>
-                <div class="cs-review">
-                    <p class="cs-review-text">
-                        One of the standout features of Hero Care is their quick response times. Whenever we have requested additional nursing staff to support our patient care needs, Hero Care has been prompt and efficient in providing high quality healthcare professionals. We really enjoy our dedicated account manager, it is so nice having someone who can understand our specific needs and really deliver
-                    </p>
-                    <span class="cs-name">Client</span>
-                    <span class="cs-job">Nurse Manager, Toronto ON</span>
-                    <img class="cs-stars" loading="lazy" decoding="async" src="/image/home/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
-                </div>
-            </div>
-            <div class="cs-review-group">
-                <div class="cs-picture-group">
-                    <picture class="cs-picture cs-picture-bg2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/image/home/review3.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/image/home/review3.png">
-                        <img loading="lazy" decoding="async" src="/image/home/review3.png" alt="person" width="240" height="286">
-                    </picture>
-                    <!--Quote Block-->
-                    <picture class="cs-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="/image/home/quote.svg" alt="quote" width="58" height="48" aria-hidden="true">
-                    </picture>
-                </div>
-                <div class="cs-review">
-                    <p class="cs-review-text">
-                        Hero Care's affordability has been a significant advantage for our hospital. They offer competitive rates for their nursing services without compromising on the quality of care. This has allowed us to optimize our staffing budget and allocate resources effectively, while still maintaining the highest standards of patient care.
-                    </p>
-                    <span class="cs-name">Client</span>
-                    <span class="cs-job">Director of Care, Saint John NB</span>
-                    <img class="cs-stars" loading="lazy" decoding="async" src="/image/home/stars.png" alt="stars" width="100" height="19" aria-hidden="true">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                                                         
-
-                
-<!-- ============================================ -->
+{{ partial "reviews.html" . }}                     
+                                
+ <!-- ============================================ -->
 <!--                     CTA                      -->
 <!-- ============================================ -->
 
-<!-- ============================================ -->
-<!--                    CTA                       -->
-<!-- ============================================ -->
+{{ partial "cta.html" . }}
+                                              
 
-<section id="cta-262">
-    <div class="cs-container">
-        <div class="cs-left-section">
-            <h2 class="cs-title">Schedule Your Next Checkup With Us</h2>
-            <a href="" class="cs-button-solid">Request Appointment</a>
-        </div>
-        <div class="cs-content">
-            <span class="cs-header">Available Hours</span>
-            <p class="cs-p"> 
-                Tuesday, Thursday, Friday: 9am-6pm<br>
-                ​(closed for lunch 12pm-2pm)
-            </p>
-            <p class="cs-p">
-                Appointments Preferred, Walk-Ins Welcome.<br>
-                Saturdays by Appointment Only.
-            </p>
-        </div>
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth-m.jpg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth.jpg">
-            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth.jpg" alt="appliance" width="275" height="132">
-        </picture>
-    </div>
-</section>
-                                
-                            
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-    if (!user) {
-        window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-        });
+
+
+
+                   
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
     }
-    });
-}
+  </script>
+
+        
+
+<script defer>
+    const toggle = document.querySelector("#pricing .cs-toggle");
+    const cardGroup = Array.from(document.querySelectorAll('.cs-card-group'))
+
+    toggle.addEventListener('click', (e) => { 
+        for (const item of cardGroup) {
+            item.classList.toggle("active");
+        }
+        toggle.classList.toggle("active");
+    });        
 </script>
 
-<script>
-// JS for content editable trick from Chris Coyier
-var span = document.querySelector("span");
-
-span.addEventListener("input", function() {
-    var text = this.innerText;
-    this.setAttribute("data-heading", text);
-    this.parentElement.setAttribute("data-heading", text);
-});
-</script>
-
-<script>
+<script defer>
     const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
-        for (const item of faqItems) {
-            const onClick = () => {
-            item.classList.toggle('active')
-        }
-        item.addEventListener('click', onClick)
-        }
-                                
-</script>
-
-<script>
-    function removeLoadingAttribute() {
-        const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        if (screenWidth >= 1024) {
-            const elements = document.querySelectorAll('.desktop-allow');
-
-            elements.forEach(element => {
-                if (element.hasAttribute('loading')) {
-                    element.removeAttribute('loading');
-                }
-            });
-        }
+    for (const item of faqItems) {
+        const onClick = () => {
+        item.classList.toggle('active')
     }
-
-    // Run the function on page load
-    removeLoadingAttribute();
-
-    // Run the function when the window is resized
-    window.addEventListener('resize', removeLoadingAttribute);
-</script>
-    </main>
+    item.addEventListener('click', onClick)
+    }
+</script></main>
     <!-- ============================================ -->
-    <!--                   Footer                     -->
-    <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
 
-    <section id="cs-footer">
-        <div class="cs-container">
-            <div class="cs-top">
-                <!-- Logo Group -->
-                <div class="cs-logo-group">
-                    <a aria-label="go back to home" class="cs-logo" href="/">
-                        <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/logo.svg" alt="logo" width="158" height="37">
-                    </a>
-                </div>
-                <!-- Contact Info -->
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <span class="cs-header">Contact</span>
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/mail-teal.svg" alt="phone" width="24" height="24">
-                        <a class="cs-link cs-phone" href="#">hello@yourbrand.com</a>
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/pin-teal.svg" alt="pin" width="24" height="24">
-                        <span class="cs-link cs-address">
-                            Toronto, ON
-                        </span>
-                    </li>
-                </ul>
-                <!--Sitemap-->
-                <ul class="cs-ul cs-sitemap">
-                    <li class="cs-li">
-                        <span class="cs-header">Sitemap</span>
-                    </li>
-                    <li class="cs-li">
-                        <a class="cs-link" href="/about">
-                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
-                            About
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a class="cs-link" href="/organizations">
-                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
-                            Organizations
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a class="cs-link" href="/workers">
-                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
-                            Health Care Pros.
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a class="cs-link" href="/contact">
-                            <img class="cs-arrow" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/angle-right.svg" alt="arrow" width="4" height="7">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <div class="cs-subscribe-group">
-                    <a class="cs-seal" href=""><img loading="lazy" decoding="async" src="/image/icon/badge.png" width="300px" height="300px" alt="TOP HEALTHCARE STAFFING" /></a>
-                    <span class="cs-header">Subscribe to our news</span>
-                    <form class="cs-form" name="Footer Subscribe" method="post">
-                        <input id="email" aria-label="email" class="cs-input" name="email" type="email" placeholder="Email" required>
-                        <button name="submit" type="submit" id="cs-submit" class="button-transparent" data-submit="...Sending">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <!--Bottom Copyright And Social-->
-            <div class="cs-bottom">
-                <div class="cs-copyright">
-                    <span>Copyright 2023</span>
-                    <div class="cs-flex">
-                        <a class="cs-copyright-link" href="" target="_blank">Built By Eworks</a>
-                        <a href="/privacy-policy" class="cs-copyright-link cs-terms">Privacy Policy</a>
-                        <a href="/terms-and-conditions" class="cs-copyright-link cs-terms">Terms & Conditions</a>
-                    </div>
-                </div>
 
-                <div class="cs-social">
-                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
-                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/facebook.svg" alt="facebook" width="11" height="11">
-                    </a>
-                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
-                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/linkedin.svg" alt="linkedin" width="11" height="11">
-                    </a>
-                    <a class="cs-social-link" aria-label="visit instagram profile" href="" target="_blank" rel="noopener">
-                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/instagram-teal.svg" alt="instagram" width="6" height="11">
-                    </a>
-                    <a class="cs-social-link" aria-label="visit linkedin profile" href="" target="_blank" rel="noopener">
-                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/image/icon/indeed.svg" alt="indeed" width="11" height="11">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-                                
 
-    <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/3e81bebd00b8a71cfd96f3655691f4ceaecc24f6.js'></script>
+    <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/7ac50217c770295ada31ce8c2770b8eda97265f7.js'></script>
 
     <!--
         This script adds a class to the body after scrolling 100px
         and we used these body.scroll styles to create some on scroll 
         animations with the navbar
     -->
-    <script>
+    <script defer>
         document.addEventListener('scroll', (e) => { 
             const scroll = document.documentElement.scrollTop;
             if(scroll >= 100){
@@ -948,9 +463,6 @@ span.addEventListener("input", function() {
         });
     </script>
 
-    
-</body>
-</html>
 
 
-
+{{ end }}

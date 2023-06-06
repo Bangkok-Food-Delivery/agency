@@ -1,0 +1,307 @@
+
+{{ define "main" }}
+
+
+<!-- 
+This is to pre load any image above the fold, like hero section backgrounds.
+If you do not have any images in your hero section that you need to preload, remove this 
+block 
+-->
+
+
+<link rel="preload" as="image" href="/assets/images/landing-m2.webp">
+
+
+
+<link rel="stylesheet" href="/css/critical.css">
+<link rel="stylesheet" href="/css/local.css">
+
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-850">
+    <div class="cs-container">
+        <span class="cs-int-title">Massage List</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/images/hero.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/images/hero.webp">
+        <img loading="lazy" decoding="async" src="/images/hero.webp" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+                                
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-877">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Massage</span>
+            <h2 class="cs-title">Our Massages</h2>
+            <p class="cs-text">
+                Whether you're seeking relaxation, stress relief, pain management, or overall well-being, our therapists are skilled in a wide range of techniques to address your needs. From traditional Thai massage to aromatherapy, deep tissue massage to hot stone therapy, we have a variety of options to choose from.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/thai-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/thai-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/thai-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">AUTHENTIC THAI MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        Our authentic Thai massage will make you feel both relaxed and energised through its unique combination of pressure point and ancient stretching techniques. It releases tension, increases vitality and flexibility, and creates wholeness of the mind, body and spirit.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/aromatherapy-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/aromatherapy-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/aromatherapy-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">AROMATHERAPY MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        This massage is performed with essential oils blended from flower and fruit extracts to stimulate the muscles by hand. It focuses on gentle and soft massage to reduce muscle tension. The oil massage has a relaxing aroma that activates the nervous system, reduces tension and relieves fatigue. This oil massage will make your skin smooth and rejuvenated whilst leaving a relaxing effect that will enable you to sleep well.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <img loading="lazy" decoding="async" src="/images/massage-lomi-lomi.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">MASAJE LOMI LOMI (HAWAIANO)</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        ‘Lomi lomi’ translates to ‘rub rub’ in Hawaiian and reflects the broad, flowing strokes made with the therapist’s fingers, palms, arms and elbows. Coconut oil is used to enable the strokes to be smooth whilst moisturising and nourishing the skin. The massage works gently yet deeply into the muscles with continuous, flowing strokes, allowing the recipient to relax and give in to the nurturing touch. At the end of the session, enjoy a refreshing shower in our facilities.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/herbal-compress-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/herbal-compress-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/herbal-compress-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">THAI HERBAL COMPRESS MASSAGE (Booking required)</h3>
+                    <p class="cs-item-text">
+                        60 min 65 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        The Thai herbal compress contains numerous herbs tightly bound in fabric which is steamed until hot and firmly rolled. After a full-body pressure point Thai massage, the hot herbal compress is pressed over the entire body in order to relieve general muscular aches, pains and tension. Additionally, improving and stimulating the lymphatic system whilst simultaneously increasing blood flow to aid muscle repair.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/aromatherapy-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/aromatherapy-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/aromatherapy-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">AROMATHERAPY MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        This massage is performed with essential oils blended from flower and fruit extracts to stimulate the muscles by hand. It focuses on gentle and soft massage to reduce muscle tension. The oil massage has a relaxing aroma that activates the nervous system, reduces tension and relieves fatigue. This oil massage will make your skin smooth and rejuvenated whilst leaving a relaxing effect that will enable you to sleep well.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <img loading="lazy" decoding="async" src="/images/massage-lomi-lomi.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">MASAJE LOMI LOMI (HAWAIANO)</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        ‘Lomi lomi’ translates to ‘rub rub’ in Hawaiian and reflects the broad, flowing strokes made with the therapist’s fingers, palms, arms and elbows. Coconut oil is used to enable the strokes to be smooth whilst moisturising and nourishing the skin. The massage works gently yet deeply into the muscles with continuous, flowing strokes, allowing the recipient to relax and give in to the nurturing touch. At the end of the session, enjoy a refreshing shower in our facilities.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/thai-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/thai-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/thai-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">AUTHENTIC THAI MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        Our authentic Thai massage will make you feel both relaxed and energised through its unique combination of pressure point and ancient stretching techniques. It releases tension, increases vitality and flexibility, and creates wholeness of the mind, body and spirit.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/aromatherapy-massage.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/aromatherapy-massage.jpg">
+                        <img loading="lazy" decoding="async" src="/images/aromatherapy-massage.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">AROMATHERAPY MASSAGE</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        This massage is performed with essential oils blended from flower and fruit extracts to stimulate the muscles by hand. It focuses on gentle and soft massage to reduce muscle tension. The oil massage has a relaxing aroma that activates the nervous system, reduces tension and relieves fatigue. This oil massage will make your skin smooth and rejuvenated whilst leaving a relaxing effect that will enable you to sleep well.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services/" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/massage-lomi-lomi.jpg">
+                        <img loading="lazy" decoding="async" src="/images/massage-lomi-lomi.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">MASAJE LOMI LOMI (HAWAIANO)</h3>
+                    <p class="cs-item-text">
+                        60 min 55 €
+                    </p>
+                    <p class="cs-item-text">
+                        90 min 85 €
+                    </p><br>
+                    <p class="cs-item-text">
+                        ‘Lomi lomi’ translates to ‘rub rub’ in Hawaiian and reflects the broad, flowing strokes made with the therapist’s fingers, palms, arms and elbows. Coconut oil is used to enable the strokes to be smooth whilst moisturising and nourishing the skin. The massage works gently yet deeply into the muscles with continuous, flowing strokes, allowing the recipient to relax and give in to the nurturing touch. At the end of the session, enjoy a refreshing shower in our facilities.
+                    </p>
+                </a>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">View All Massage</a>
+    </div>
+</section>          
+                                
+ <!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+{{ partial "cta.html" . }}
+                                              
+
+
+
+
+
+                   
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+        
+
+<script defer>
+    const toggle = document.querySelector("#pricing .cs-toggle");
+    const cardGroup = Array.from(document.querySelectorAll('.cs-card-group'))
+
+    toggle.addEventListener('click', (e) => { 
+        for (const item of cardGroup) {
+            item.classList.toggle("active");
+        }
+        toggle.classList.toggle("active");
+    });        
+</script>
+
+<script defer>
+    const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+    for (const item of faqItems) {
+        const onClick = () => {
+        item.classList.toggle('active')
+    }
+    item.addEventListener('click', onClick)
+    }
+</script></main>
+    <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+
+
+    <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/7ac50217c770295ada31ce8c2770b8eda97265f7.js'></script>
+
+    <!--
+        This script adds a class to the body after scrolling 100px
+        and we used these body.scroll styles to create some on scroll 
+        animations with the navbar
+    -->
+    <script defer>
+        document.addEventListener('scroll', (e) => { 
+            const scroll = document.documentElement.scrollTop;
+            if(scroll >= 100){
+        document.querySelector('body').classList.add('scroll')
+            } else {
+            document.querySelector('body').classList.remove('scroll')
+            }
+        });
+    </script>
+
+
+
+{{ end }}

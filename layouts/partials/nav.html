@@ -1,14 +1,40 @@
-<header class="site-header">
-  <nav class="site-nav">
-    <a class="logo" href="/">
-      {{ .Site.Title }}
-    </a>
-    <ul class="main-menu">
-      {{ range.Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
+<!DOCTYPE html>
+<nav class="cs-nav" role="navigation">
+  <!-- Mobile Nav Toggle -->
+  <button class="cs-toggle" aria-label="mobile menu toggle">
+    <div class="cs-box" aria-hidden="true">
+      <span class="cs-line cs-line1" aria-hidden="true"></span>
+      <span class="cs-line cs-line2" aria-hidden="true"></span>
+      <span class="cs-line cs-line3" aria-hidden="true"></span>
+    </div>
+  </button>
+  <div class="cs-ul-wrapper">
+    <ul id="cs-expanded-758" class="cs-ul" aria-expanded="false">
+
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.nav }}
+      <li class="cs-li cs-dropdown" tabindex="0">
+        <a class="cs-li-link {{ if or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) }}cs-active{{ end }}" href="{{ .URL }}">
+          {{ .Name }}
+          <!-- Add dropdown icon here -->
+          {{ if .HasChildren }}
+            <span class="cs-dropdown-icon">&#9662;</span>
+          {{ end }}
+        </a>
+
+        {{ if .HasChildren }}
+        <ul class="cs-drop-ul">
+          {{ range .Children }}
+          <li class="cs-drop-li">
+            <a class="cs-li-link cs-drop-link" href="{{ relURL .URL }}">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
       </li>
       {{ end }}
     </ul>
-  </nav>
-</header>
+  </div>
+</nav>

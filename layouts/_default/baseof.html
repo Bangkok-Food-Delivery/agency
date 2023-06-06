@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}</title>
-  </head>
+<html lang="{{ .Site.Language.Lang }}">
+  {{ partial "head.html" . }}
   <body>
-    {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+    <a href="#main">{{ T "skip_to_content" }}</a>
+    
+   
+    <div class="wrapper">
+      {{ partial "header.html" . }}
+      <div class="main-and-footer">
+        <div>
+          {{ block "main" . }}{{ end }}
+          {{ if ne .Site.Params.moveFooterToHeader true }}
+            {{ partial "footer.html" . }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+     <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/7ac50217c770295ada31ce8c2770b8eda97265f7.js'></script>
+
+    <!--
+        This script adds a class to the body after scrolling 100px
+        and we used these body.scroll styles to create some on scroll 
+        animations with the navbar
+    -->
+    <script defer>
+        document.addEventListener('scroll', (e) => { 
+            const scroll = document.documentElement.scrollTop;
+            if(scroll >= 100){
+        document.querySelector('body').classList.add('scroll')
+            } else {
+            document.querySelector('body').classList.remove('scroll')
+            }
+        });
+    </script>
+    
+    
+    
   </body>
 </html>

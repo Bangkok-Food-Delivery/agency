@@ -1,7 +1,7 @@
 ---
+layout: "location"
 title: "About"
-layout: "about"
-pageRef: "about"
+pageRef: "location"
 ---
 
 Here's a bit about me.

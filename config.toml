@@ -1,14 +1,54 @@
-title = "My New Hugo Site"
+######################## default configuration ####################
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
+baseURL = ""
+title = ""
+
+
+# google analytics
+googleAnalytics = "G-6RN5LPMNBM" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+
+######################## Navigation Menu ####################
+
+[[menu]]
+    [[Menus.nav]]
+    pageRef="/"
+    name = "Home"
+    url = "/"
     weight = 10
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
+    [[Menus.nav]]
+    pageRef="about"
+    name = "About Us"
+    url = "/about/"
     weight = 20
+
+    [[Menus.nav]]
+    pageRef="gift card"
+    name = "Gift Cards"
+    url = "https://aromathaigiftcards.enjovia.com/?lang=en_GB"
+    weight = 30
+
+    [[Menus.nav]]
+    pageRef="massage"
+    name = "Massage"
+    url = "/massage/"
+    weight = 40
+
+    [[Menus.nav]]
+    pageRef="spa"
+    name = "Spa"
+    url = "/massage/"
+    weight = 50
+
+    [[Menus.nav]]
+    pageRef="gallery"
+    name = "Gallery"
+    url = "/gallery/"
+    weight = 60
+
+    
+
+    
+
+
+
